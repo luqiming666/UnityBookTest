@@ -1,0 +1,80 @@
+{
+    "Metadata": {
+        "Version": 2,
+        "Created": "2023-05-25",
+        "Description": "Exported from RichTap Creator VR"
+    },
+    "PatternList": [
+        {
+            "AbsoluteTime": 0,
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "RelativeTime": 0,
+                        "Parameters": {
+                            "Intensity": 78,
+                            "Frequency": 50
+                        },
+                        "Index": 1
+                    }
+                },
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "RelativeTime": 202,
+                        "Parameters": {
+                            "Intensity": 93,
+                            "Frequency": 50
+                        },
+                        "Index": 2
+                    }
+                },
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "RelativeTime": 428,
+                        "Parameters": {
+                            "Intensity": 77,
+                            "Frequency": 50
+                        },
+                        "Index": 1
+                    }
+                },
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "RelativeTime": 653,
+                        "Parameters": {
+                            "Intensity": 50,
+                            "Frequency": 50
+                        },
+                        "Index": 2
+                    }
+                },
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "RelativeTime": 871,
+                        "Parameters": {
+                            "Intensity": 93,
+                            "Frequency": 50
+                        },
+                        "Index": 1
+                    }
+                },
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "RelativeTime": 1187,
+                        "Parameters": {
+                            "Intensity": 100,
+                            "Frequency": 50
+                        },
+                        "Index": 2
+                    }
+                }
+            ]
+        }
+    ]
+}
