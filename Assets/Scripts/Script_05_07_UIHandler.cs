@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using System.IO;
+using System.Threading;
 
 // 本脚本挂在Canvas上，统一处理Canvas上的各UI事件！
 public class Script_05_07_UIHandler : MonoBehaviour
@@ -76,6 +77,7 @@ public class Script_05_07_UIHandler : MonoBehaviour
     {
         if (go == button1.gameObject) {
             Debug.Log("按钮--点击事件-已处理！");
+            ClickButton1();
         } else if (go == text.gameObject) {
             Debug.Log("文本框--点击事件-已处理！");
         } else if (go == image.gameObject) {
@@ -92,5 +94,19 @@ public class Script_05_07_UIHandler : MonoBehaviour
 
         string heContent = File.ReadAllText(filepath);
         Debug.LogFormat("Loading HE asset：{0}", heContent);
+    }
+
+    private void ClickButton1()
+    {
+        // 测试协程，发现：主线程与协程是同一个线程？！
+        Debug.LogFormat("进程ID: {0}; 主线程 名字: {1}, ID: {2}", Thread.GetCurrentProcessorId(), Thread.CurrentThread.Name, Thread.CurrentThread.ManagedThreadId);
+        StartCoroutine(MyCoroutineJob(2));
+    }
+
+    private IEnumerator MyCoroutineJob(float waittime)
+    {
+        Debug.LogFormat("协程内 >>> 线程名字: {0}, ID: {1}", Thread.CurrentThread.Name, Thread.CurrentThread.ManagedThreadId);
+        yield return new WaitForSeconds(waittime);
+        Debug.Log("协程执行完毕");
     }
 }
